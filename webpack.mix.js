@@ -10,6 +10,12 @@ let mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.styles([
+    'resources/assets/styles/vendor/font-awesome.css',
+    'resources/assets/styles/vendor/themify-icons.css'
+], 'public/css/all.css')
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+
+mix.js('resources/assets/scripts/index.js', 'public/js')
+   .sass('resources/assets/styles/index.scss', 'public/css');
+
